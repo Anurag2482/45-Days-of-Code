@@ -1,0 +1,10 @@
+//Preprocessor in C(File Inclusion)
+#include<stdio.h>
+#define A 101
+int main()
+{
+  #ifdef A
+    printf("A=%d",A);
+  #endif 
+  return 0;
+}
