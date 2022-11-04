@@ -1,0 +1,19 @@
+//pointer within structure
+#include<stdio.h>
+struct Student
+{
+ int *ptr;
+ char *name;
+}s1;
+int main()
+{
+
+  int rollno = 121;
+  s1.ptr=&rollno;
+
+  s1.name="Anuj";
+
+  printf("Student Rollno is %d ",*s1.ptr);
+  printf("Student name is %s ",s1.name);
+  return 0;
+}
