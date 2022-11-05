@@ -1,0 +1,24 @@
+//Array of Structure
+#include<stdio.h>
+struct Book
+{
+ char title[20];
+ char Author[20];
+ int pages;
+ float price;
+};
+int main()
+{
+  struct Book b[3];
+  printf("Enter Book Details: Title , Author , Pages , Price\n");
+  for(int i=0;i<3;i++)
+  {
+    scanf("%s %s %d %f",b[i].title,b[i].Author,&b[i].pages,&b[i].price);
+  }
+  printf("Book Details:\n");
+  for(int i=0;i<3;i++)
+  {
+    printf("%s %s %d %.2f\n",b[i].title,b[i].Author,b[i].pages,b[i].price);
+  }
+  return 0;
+}
