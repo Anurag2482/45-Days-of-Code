@@ -1,0 +1,22 @@
+//Nested Structure
+#include<stdio.h>
+struct date
+{
+ int day,month,year;
+};
+struct emp
+{
+ char name[15];
+ struct date d;
+};
+
+int main()
+{
+  struct emp e;
+  printf("Enter name\n");
+  scanf("%[^\n]",e.name);
+  printf("Enter day / month / year\n");
+  scanf("%d %d %d",&e.d.day,&e.d.month,&e.d.year);
+  printf("%s %d / %d / %d",e.name,e.d.day,e.d.month,e.d.year);
+  return 0;
+}
