@@ -1,0 +1,24 @@
+//Function Returning Pointer (Enter Two numbers and findout max number)
+
+#include<stdio.h>
+int* max(int *p,int *q)
+{
+    if(*p>=*q)
+    {
+        return p;
+    }
+    else
+    {
+        return q;
+    }
+}
+
+int main()
+{
+  int a,b,*c;
+  printf("Enter Two Numbers\n");
+  scanf("%d %d",&a,&b);
+  c=max(&a,&b);
+  printf("Max number is %d",*c);
+  return 0;
+}
