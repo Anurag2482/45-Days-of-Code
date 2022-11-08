@@ -1,0 +1,26 @@
+//Pointer to function
+
+#include<stdio.h>
+int fun1(int i)
+{
+  return i;
+}
+float fun2(float j)
+{
+  return j;
+}
+int main()
+{
+  int(*p)(int); // declaring pointer to function
+  float(*q)(float);
+
+  int a=15;
+  float b=4.5;
+
+  p=fun1; //assigning the address of func1 to p
+  q=fun2; //assigning the address of func2 to q
+
+  printf("%d %.2f",p(a),q(b));
+
+  return 0;
+}
