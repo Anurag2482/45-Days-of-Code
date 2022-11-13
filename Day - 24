@@ -1,0 +1,14 @@
+//Area of Circle(With No Return type and With No Parameter list)
+
+#include<stdio.h>
+void area()
+{
+    float r=5.5,a;
+    a=3.14*r*r;
+    printf("Area of Circle is %.2f",a);
+}
+int main()
+{
+  area();
+  return 0;
+}
