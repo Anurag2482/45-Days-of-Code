@@ -1,0 +1,17 @@
+//Nesting of Function                
+
+#include<stdio.h>
+void f1()
+{
+    printf("f1 function called\n");
+}
+void f2()
+{
+    printf("f2 function called\n");
+    f1();
+}
+int main()
+{
+  f2();
+  return 0;
+}
