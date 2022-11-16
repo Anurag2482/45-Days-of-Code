@@ -1,0 +1,47 @@
+// Virtual Base Class
+
+#include <iostream>
+using namespace std;
+
+class A1{
+	
+  protected:
+  int a1;
+
+};
+
+class A2:public virtual A1{
+
+	protected:
+		int a2;
+
+};
+
+class A3:public virtual A1{
+
+	protected:
+		int a3;
+};
+
+class A4:public A2,public A3{
+
+	int a4;
+
+	public:
+		void inputdata()
+		{
+			cout<<"Enter a1 a2 a3 a4"<<endl;
+			cin>>a1>>a2>>a3>>a4;
+		}
+		void display()
+		{
+	          cout<<"a1="<<a1<<"a2="<<a2<<"a3="<<a3<<"a4="<<a4;
+		}
+};
+int main() {
+        A4  a4obj;
+        a4obj.inputdata();
+        a4obj.display();
+
+	return 0;
+}
