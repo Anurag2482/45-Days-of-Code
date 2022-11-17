@@ -1,0 +1,37 @@
+// Exceptional handling
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    float a,b,c,d;
+
+    cout<<"Enter a "<<endl;
+    cin>>a;
+
+    cout<<"Enter b "<<endl;
+    cin>>b;
+
+    cout<<"Enter c "<<endl;
+    cin>>c;
+
+    try
+    {
+        if((a-b)!=0)
+        {
+            d=c/(a-b);
+            cout<<"output:"<<d<<endl;
+        }
+        else
+        {
+            throw (a-b);
+        }
+    }
+    catch(float x)
+    {
+       cout<<"Cant Divide by Zero"<<endl;
+    }
+
+    cout<<"End of Program"<<endl;
+    return 0;
+}
