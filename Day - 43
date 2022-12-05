@@ -1,0 +1,42 @@
+// Selection sort
+
+#include<stdio.h>
+void selsort(int a[],int n)
+{
+	int i,min_pos,j,temp;
+	
+	for(i=0;i<n-1;i++)
+	{
+		min_pos=i;
+		for(j=i+1;j<n;j++)
+		{
+			if(a[min_pos]>a[j])
+			min_pos=j;
+		}
+		if(min_pos!=i)
+		{
+			temp=a[min_pos];
+			a[min_pos]=a[i];
+			a[i]=temp;
+		}
+	}
+}
+
+int main()
+{
+	int a[100],i,n;
+	printf("Enter array size\n");
+	scanf("%d",&n);
+	printf("Enter array elements\n");
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	selsort(a,n);
+	printf("Sorted list is\n");
+	for(i=0;i<n;i++)
+	{
+		printf("%d ",a[i]);
+	}
+	return 0;
+}
